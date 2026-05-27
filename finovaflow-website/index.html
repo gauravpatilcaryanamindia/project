@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinovaFlow Tech — Innovative Digital Solutions</title>
+  <meta name="description" content="FinovaFlow Tech builds premium digital experiences that grow businesses. Web development, mobile apps, UI/UX design, performance, and more." />
+  <meta name="keywords" content="web development, mobile app development, UI/UX design, SEO, FinovaFlow Tech" />
+  <meta property="og:title" content="FinovaFlow Tech — Code. Create. Elevate." />
+  <meta property="og:description" content="Innovative Digital Solutions for a Smarter Tomorrow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===================== LOADER ===================== -->
+<div id="loader" class="loader">
+  <div class="loader-inner">
+    <svg class="loader-logo" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lg1" x1="0" y1="0" x2="60" y2="70" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#60a5fa"/>
+          <stop offset="100%" stop-color="#2563eb"/>
+        </linearGradient>
+      </defs>
+      <path d="M8 4 L52 4 L52 16 L20 16 L20 30 L46 30 L46 42 L20 42 L20 66 L8 66 Z" fill="url(#lg1)" stroke="none"/>
+      <path d="M20 30 L46 30 L46 42 L20 42" fill="rgba(37,99,235,0.3)"/>
+    </svg>
+    <div class="loader-bar"><div class="loader-progress"></div></div>
+    <p class="loader-text">FinovaFlow Tech</p>
+  </div>
+</div>
+
+<!-- ===================== CANVAS BACKGROUND ===================== -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="navbar" class="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo" id="navLogo">
+      <svg class="logo-icon" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="60" y2="70" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#60a5fa"/>
+            <stop offset="100%" stop-color="#2563eb"/>
+          </linearGradient>
+        </defs>
+        <path d="M8 4 L52 4 L52 16 L20 16 L20 30 L46 30 L46 42 L20 42 L20 66 L8 66 Z" fill="url(#logoGrad)"/>
+      </svg>
+      <span class="logo-text"><span class="logo-finova">Finova</span><span class="logo-flow">Flow</span> <span class="logo-tech">Tech</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#technologies" class="nav-link">Tech Stack</a></li>
+      <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+      </button>
+      <a href="#contact" class="btn btn-primary nav-cta">Let's Talk</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="home" class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge reveal-up" style="--delay:0.1s">
+        <span class="badge-dot"></span>
+        Innovative Digital Solutions for a Smarter Tomorrow
+      </div>
+      <h1 class="hero-headline reveal-up" style="--delay:0.2s">
+        We Build <span class="gradient-text">Digital Experiences</span> That Grow Businesses
+      </h1>
+      <p class="hero-sub reveal-up" style="--delay:0.35s">
+        <span class="sub-word">Code</span>
+        <span class="sub-dot">•</span>
+        <span class="sub-word">Create</span>
+        <span class="sub-dot">•</span>
+        <span class="sub-word">Elevate</span>
+      </p>
+      <p class="hero-desc reveal-up" style="--delay:0.45s">
+        We craft premium, high-performance digital products that captivate users and accelerate business growth.
+      </p>
+      <div class="hero-btns reveal-up" style="--delay:0.55s">
+        <a href="#contact" class="btn btn-primary btn-glow" id="heroGetStarted">
+          <span>Get Started</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#services" class="btn btn-outline" id="heroViewServices">
+          <span>View Services</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats reveal-up" style="--delay:0.7s">
+        <div class="stat-item">
+          <span class="stat-num" data-target="150">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="98">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Satisfaction</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="7">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-mockup reveal-right" style="--delay:0.3s">
+      <div class="mockup-float">
+        <div class="laptop-wrap">
+          <div class="laptop">
+            <div class="laptop-screen">
+              <div class="screen-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <div class="screen-url">finovaflowtech.com</div>
+              </div>
+              <div class="screen-body">
+                <div class="sb-nav">
+                  <div class="sb-logo-mini"></div>
+                  <div class="sb-links">
+                    <div class="sb-link"></div>
+                    <div class="sb-link"></div>
+                    <div class="sb-link"></div>
+                  </div>
+                </div>
+                <div class="sb-hero">
+                  <div class="sb-title">We Build <span>Digital</span></div>
+                  <div class="sb-title-2">Experiences</div>
+                  <div class="sb-btn"></div>
+                </div>
+                <div class="sb-cards">
+                  <div class="sb-card"></div>
+                  <div class="sb-card"></div>
+                  <div class="sb-card"></div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+            <div class="laptop-foot"></div>
+          </div>
+        </div>
+        <div class="phone-wrap">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="ps-header"></div>
+              <div class="ps-hero">
+                <div class="ps-title">Transform</div>
+                <div class="ps-title2">Ideas into</div>
+                <div class="ps-title3 gradient-text-sm">Powerful Solutions</div>
+                <div class="ps-btn"></div>
+              </div>
+              <div class="ps-cards">
+                <div class="ps-card"></div>
+                <div class="ps-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-badge badge-clean">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="10" stroke="#2563eb" stroke-width="1.5"/></svg>
+          Clean Code
+        </div>
+        <div class="mockup-badge badge-smart" style="animation-delay:0.7s">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Smart Solutions
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="section services-section">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-tag">Our Services</div>
+      <h2 class="section-title">What We <span class="gradient-text">Deliver</span></h2>
+      <p class="section-desc">End-to-end digital solutions crafted with precision, speed, and creativity.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal-up" style="--delay:0.1s" id="service-web">
+        <div class="service-icon-wrap">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 22V12h6v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <h3>Web Development</h3>
+        <p>High-performance, pixel-perfect websites built with cutting-edge frameworks. From landing pages to complex web applications.</p>
+        <div class="service-tags"><span>React</span><span>Next.js</span><span>Node.js</span></div>
+        <a href="#contact" class="service-link">Learn More <span>→</span></a>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.2s" id="service-mobile">
+        <div class="service-icon-wrap">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" stroke="currentColor" stroke-width="1.5"/><path d="M12 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <h3>Mobile App Development</h3>
+        <p>Native and cross-platform mobile apps that deliver seamless experiences on iOS and Android with elegant, intuitive interfaces.</p>
+        <div class="service-tags"><span>React Native</span><span>Flutter</span><span>Swift</span></div>
+        <a href="#contact" class="service-link">Learn More <span>→</span></a>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.3s" id="service-ui">
+        <div class="service-icon-wrap">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v3m0 14v3M4.22 4.22l2.12 2.12m11.32 11.32l2.12 2.12M2 12h3m14 0h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>Human-centered design that fuses aesthetics with usability. We create interfaces users love, that convert and retain.</p>
+        <div class="service-tags"><span>Figma</span><span>Prototyping</span><span>Research</span></div>
+        <a href="#contact" class="service-link">Learn More <span>→</span></a>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.4s" id="service-seo">
+        <div class="service-icon-wrap">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <h3>Performance & SEO</h3>
+        <p>Blazing-fast load times and top search rankings. We optimize every layer of your digital presence for maximum visibility.</p>
+        <div class="service-tags"><span>Core Web Vitals</span><span>Analytics</span><span>CDN</span></div>
+        <a href="#contact" class="service-link">Learn More <span>→</span></a>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.5s" id="service-maint">
+        <div class="service-icon-wrap">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <h3>Maintenance & Support</h3>
+        <p>24/7 proactive monitoring, regular updates, and dedicated support so your digital products stay secure and performant.</p>
+        <div class="service-tags"><span>99.9% Uptime</span><span>24/7 Support</span><span>Security</span></div>
+        <a href="#contact" class="service-link">Learn More <span>→</span></a>
+      </div>
+      <div class="service-card service-cta-card reveal-up" style="--delay:0.6s">
+        <div class="cta-card-inner">
+          <div class="cta-orb"></div>
+          <h3>Have a project in mind?</h3>
+          <p>Let's transform your ideas into powerful digital solutions that stand out.</p>
+          <a href="#contact" class="btn btn-primary btn-glow">Start a Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <div class="section-tag reveal-up">About Us</div>
+        <h2 class="section-title reveal-up" style="--delay:0.1s">Building the <span class="gradient-text">Future</span>, One Line at a Time</h2>
+        <p class="about-text reveal-up" style="--delay:0.2s">
+          FinovaFlow Tech is a premier digital agency committed to delivering innovative, scalable, and visually stunning digital solutions. We blend cutting-edge technology with creative design to help businesses thrive in the digital age.
+        </p>
+        <p class="about-text reveal-up" style="--delay:0.3s">
+          Founded on the principles of <strong>clean code</strong>, <strong>smart solutions</strong>, and <strong>real impact</strong>, our team of passionate engineers and designers bring your vision to life with precision and flair.
+        </p>
+        <div class="about-features reveal-up" style="--delay:0.4s">
+          <div class="about-feature">
+            <div class="feature-check">✓</div>
+            <span>Agile development methodology</span>
+          </div>
+          <div class="about-feature">
+            <div class="feature-check">✓</div>
+            <span>Transparent communication & reporting</span>
+          </div>
+          <div class="about-feature">
+            <div class="feature-check">✓</div>
+            <span>On-time delivery guarantee</span>
+          </div>
+          <div class="about-feature">
+            <div class="feature-check">✓</div>
+            <span>Post-launch ongoing support</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary reveal-up" style="--delay:0.5s">Meet Our Team</a>
+      </div>
+      <div class="about-right">
+        <div class="counters-grid reveal-up" style="--delay:0.2s">
+          <div class="counter-card">
+            <div class="counter-icon">🚀</div>
+            <div class="counter-num"><span class="count" data-target="150">0</span><span>+</span></div>
+            <div class="counter-label">Projects Delivered</div>
+          </div>
+          <div class="counter-card">
+            <div class="counter-icon">⭐</div>
+            <div class="counter-num"><span class="count" data-target="98">0</span><span>%</span></div>
+            <div class="counter-label">Client Satisfaction</div>
+          </div>
+          <div class="counter-card">
+            <div class="counter-icon">🌍</div>
+            <div class="counter-num"><span class="count" data-target="25">0</span><span>+</span></div>
+            <div class="counter-label">Countries Served</div>
+          </div>
+          <div class="counter-card">
+            <div class="counter-icon">👨‍💻</div>
+            <div class="counter-num"><span class="count" data-target="30">0</span><span>+</span></div>
+            <div class="counter-label">Expert Team Members</div>
+          </div>
+        </div>
+        <div class="timeline reveal-up" style="--delay:0.4s">
+          <h3 class="timeline-title">Our Journey</h3>
+          <div class="timeline-items">
+            <div class="timeline-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-year">2017</div>
+                <div class="tl-event">Founded FinovaFlow Tech with a vision to redefine digital solutions.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-year">2019</div>
+                <div class="tl-event">Expanded to 15+ team members. Launched 50+ successful projects.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-year">2021</div>
+                <div class="tl-event">Went global — serving clients in 20+ countries across 4 continents.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-year">2024</div>
+                <div class="tl-event">150+ projects delivered. Named Top Digital Agency of the Year.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PORTFOLIO ===================== -->
+<section id="portfolio" class="section portfolio-section">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-tag">Our Work</div>
+      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      <p class="section-desc">A glimpse of what we've built for ambitious clients worldwide.</p>
+    </div>
+    <div class="portfolio-filter reveal-up" style="--delay:0.1s">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+    <div class="portfolio-grid" id="portfolioGrid">
+      <div class="portfolio-item reveal-up" data-category="web" style="--delay:0.1s">
+        <div class="portfolio-img" style="background: linear-gradient(135deg, #1e40af, #06b6d4)">
+          <div class="portfolio-screen">
+            <div class="ps-bar"></div>
+            <div class="ps-content">
+              <div class="ps-line w70"></div>
+              <div class="ps-line w50"></div>
+              <div class="ps-blocks">
+                <div class="ps-block blue"></div>
+                <div class="ps-block cyan"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info">
+            <div class="portfolio-tag">Web App</div>
+            <h3>FinDash Analytics</h3>
+            <p>Real-time financial dashboard with advanced data visualization</p>
+            <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item reveal-up" data-category="mobile" style="--delay:0.2s">
+        <div class="portfolio-img" style="background: linear-gradient(135deg, #7c3aed, #2563eb)">
+          <div class="portfolio-screen">
+            <div class="ps-phone-frame">
+              <div class="ps-phone-content">
+                <div class="ps-line w60"></div>
+                <div class="ps-line w40"></div>
+                <div class="ps-icon-row">
+                  <div class="ps-icon"></div>
+                  <div class="ps-icon"></div>
+                  <div class="ps-icon"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info">
+            <div class="portfolio-tag">Mobile App</div>
+            <h3>NovaPay Wallet</h3>
+            <p>Digital payment solution with biometric authentication</p>
+            <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item reveal-up" data-category="design" style="--delay:0.3s">
+        <div class="portfolio-img" style="background: linear-gradient(135deg, #0f172a, #1e40af)">
+          <div class="portfolio-screen">
+            <div class="ps-design-grid">
+              <div class="ps-color-swatch" style="background:#60a5fa"></div>
+              <div class="ps-color-swatch" style="background:#2563eb"></div>
+              <div class="ps-color-swatch" style="background:#1e40af"></div>
+              <div class="ps-color-swatch" style="background:#06b6d4"></div>
+              <div class="ps-type-sample"></div>
+              <div class="ps-type-sample sm"></div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info">
+            <div class="portfolio-tag">UI/UX Design</div>
+            <h3>FlowBrand System</h3>
+            <p>Complete brand identity and design system for SaaS platform</p>
+            <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item reveal-up" data-category="web" style="--delay:0.4s">
+        <div class="portfolio-img" style="background: linear-gradient(135deg, #064e3b, #0891b2)">
+          <div class="portfolio-screen">
+            <div class="ps-content">
+              <div class="ps-chart">
+                <div class="ps-bar-chart">
+                  <div class="ps-bar-item" style="height:60%"></div>
+                  <div class="ps-bar-item" style="height:80%"></div>
+                  <div class="ps-bar-item" style="height:45%"></div>
+                  <div class="ps-bar-item" style="height:90%"></div>
+                  <div class="ps-bar-item" style="height:70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info">
+            <div class="portfolio-tag">Web App</div>
+            <h3>EcoTrack Platform</h3>
+            <p>Sustainability metrics & reporting for enterprise businesses</p>
+            <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item reveal-up" data-category="mobile" style="--delay:0.5s">
+        <div class="portfolio-img" style="background: linear-gradient(135deg, #7c2d12, #c2410c)">
+          <div class="portfolio-screen">
+            <div class="ps-phone-frame orange">
+              <div class="ps-phone-content">
+                <div class="ps-map-dots">
+                  <div class="ps-dot"></div>
+                  <div class="ps-dot"></div>
+                  <div class="ps-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info">
+            <div class="portfolio-tag">Mobile App</div>
+            <h3>DeliverNow</h3>
+            <p>Real-time delivery tracking app with AI route optimization</p>
+            <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item reveal-up" data-category="design" style="--delay:0.6s">
+        <div class="portfolio-img" style="background: linear-gradient(135deg, #1e1b4b, #4f46e5)">
+          <div class="portfolio-screen">
+            <div class="ps-content center">
+              <div class="ps-logo-mock">
+                <div class="ps-logo-shape"></div>
+              </div>
+              <div class="ps-line w50" style="margin:0 auto 6px"></div>
+              <div class="ps-line w30" style="margin:0 auto"></div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info">
+            <div class="portfolio-tag">Branding</div>
+            <h3>Luminar Identity</h3>
+            <p>Premium brand identity for luxury fintech startup</p>
+            <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TECHNOLOGIES ===================== -->
+<section id="technologies" class="section tech-section">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-tag">Tech Stack</div>
+      <h2 class="section-title">Technologies We <span class="gradient-text">Master</span></h2>
+      <p class="section-desc">We work with the most powerful and modern technologies to deliver world-class products.</p>
+    </div>
+  </div>
+  <div class="tech-ticker-wrap reveal-up" style="--delay:0.2s">
+    <div class="ticker-fade-left"></div>
+    <div class="ticker-fade-right"></div>
+    <div class="tech-ticker" id="techTicker">
+      <div class="ticker-track" id="tickerTrack">
+        <div class="tech-pill"><span class="tech-emoji">⚛️</span> React</div>
+        <div class="tech-pill"><span class="tech-emoji">▲</span> Next.js</div>
+        <div class="tech-pill"><span class="tech-emoji">🟨</span> JavaScript</div>
+        <div class="tech-pill"><span class="tech-emoji">🔷</span> TypeScript</div>
+        <div class="tech-pill"><span class="tech-emoji">🎨</span> Tailwind CSS</div>
+        <div class="tech-pill"><span class="tech-emoji">🟢</span> Node.js</div>
+        <div class="tech-pill"><span class="tech-emoji">🐍</span> Python</div>
+        <div class="tech-pill"><span class="tech-emoji">🐘</span> PostgreSQL</div>
+        <div class="tech-pill"><span class="tech-emoji">🍃</span> MongoDB</div>
+        <div class="tech-pill"><span class="tech-emoji">☁️</span> AWS</div>
+        <div class="tech-pill"><span class="tech-emoji">🐳</span> Docker</div>
+        <div class="tech-pill"><span class="tech-emoji">⚡</span> Vite</div>
+        <div class="tech-pill"><span class="tech-emoji">🎯</span> Figma</div>
+        <div class="tech-pill"><span class="tech-emoji">📱</span> React Native</div>
+        <div class="tech-pill"><span class="tech-emoji">💙</span> Flutter</div>
+        <div class="tech-pill"><span class="tech-emoji">🔴</span> Redis</div>
+        <!-- Duplicate for seamless loop -->
+        <div class="tech-pill"><span class="tech-emoji">⚛️</span> React</div>
+        <div class="tech-pill"><span class="tech-emoji">▲</span> Next.js</div>
+        <div class="tech-pill"><span class="tech-emoji">🟨</span> JavaScript</div>
+        <div class="tech-pill"><span class="tech-emoji">🔷</span> TypeScript</div>
+        <div class="tech-pill"><span class="tech-emoji">🎨</span> Tailwind CSS</div>
+        <div class="tech-pill"><span class="tech-emoji">🟢</span> Node.js</div>
+        <div class="tech-pill"><span class="tech-emoji">🐍</span> Python</div>
+        <div class="tech-pill"><span class="tech-emoji">🐘</span> PostgreSQL</div>
+        <div class="tech-pill"><span class="tech-emoji">🍃</span> MongoDB</div>
+        <div class="tech-pill"><span class="tech-emoji">☁️</span> AWS</div>
+        <div class="tech-pill"><span class="tech-emoji">🐳</span> Docker</div>
+        <div class="tech-pill"><span class="tech-emoji">⚡</span> Vite</div>
+        <div class="tech-pill"><span class="tech-emoji">🎯</span> Figma</div>
+        <div class="tech-pill"><span class="tech-emoji">📱</span> React Native</div>
+        <div class="tech-pill"><span class="tech-emoji">💙</span> Flutter</div>
+        <div class="tech-pill"><span class="tech-emoji">🔴</span> Redis</div>
+      </div>
+    </div>
+  </div>
+  <div class="tech-ticker-wrap" style="margin-top:16px">
+    <div class="ticker-fade-left"></div>
+    <div class="ticker-fade-right"></div>
+    <div class="tech-ticker">
+      <div class="ticker-track ticker-reverse">
+        <div class="tech-pill outline"><span class="tech-emoji">🌐</span> GraphQL</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🔁</span> REST API</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🧪</span> Jest</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🎭</span> Playwright</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🔥</span> Firebase</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🗝️</span> Auth.js</div>
+        <div class="tech-pill outline"><span class="tech-emoji">📊</span> D3.js</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🎞️</span> GSAP</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🌊</span> Framer Motion</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🛡️</span> Prisma</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🤖</span> OpenAI API</div>
+        <div class="tech-pill outline"><span class="tech-emoji">☸️</span> Kubernetes</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🌐</span> GraphQL</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🔁</span> REST API</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🧪</span> Jest</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🎭</span> Playwright</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🔥</span> Firebase</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🗝️</span> Auth.js</div>
+        <div class="tech-pill outline"><span class="tech-emoji">📊</span> D3.js</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🎞️</span> GSAP</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🌊</span> Framer Motion</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🛡️</span> Prisma</div>
+        <div class="tech-pill outline"><span class="tech-emoji">🤖</span> OpenAI API</div>
+        <div class="tech-pill outline"><span class="tech-emoji">☸️</span> Kubernetes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section id="testimonials" class="section testimonials-section">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-tag">Testimonials</div>
+      <h2 class="section-title">Loved by <span class="gradient-text">Clients</span></h2>
+      <p class="section-desc">Real results, real feedback — from businesses that trusted us with their digital journey.</p>
+    </div>
+    <div class="testimonials-slider-wrap reveal-up" style="--delay:0.2s">
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <div class="testimonial-card">
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+          <p class="t-quote">"FinovaFlow Tech completely transformed our online presence. The website they built is not just beautiful — it converts. Our leads increased by 300% in just 3 months!"</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background:linear-gradient(135deg,#2563eb,#06b6d4)">SR</div>
+            <div class="t-info">
+              <strong>Sarah Reynolds</strong>
+              <span>CEO, NexGen Solutions</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+          <p class="t-quote">"Working with FinovaFlow was a game-changer. Their team delivered our mobile app ahead of schedule with stunning UI that our users absolutely love. 10/10 would recommend!"</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background:linear-gradient(135deg,#7c3aed,#2563eb)">MK</div>
+            <div class="t-info">
+              <strong>Marcus Klein</strong>
+              <span>CTO, FlowPay Inc.</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+          <p class="t-quote">"The FinovaFlow team truly understands design. They revamped our entire brand and web presence, and the results were immediate. Professional, talented, and reliable."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background:linear-gradient(135deg,#0f172a,#1e40af)">AL</div>
+            <div class="t-info">
+              <strong>Aisha Larsson</strong>
+              <span>Founder, Luminar Brand Co.</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+          <p class="t-quote">"Their SEO and performance work took our website from page 5 to page 1 of Google in 60 days. The technical expertise of this team is outstanding."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background:linear-gradient(135deg,#064e3b,#0891b2)">JP</div>
+            <div class="t-info">
+              <strong>James Park</strong>
+              <span>Marketing Director, EcoTrack</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+          <p class="t-quote">"From concept to launch in 6 weeks — FinovaFlow delivered a world-class product. Their communication is impeccable and the quality of work is simply unmatched."</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background:linear-gradient(135deg,#1e1b4b,#4f46e5)">DM</div>
+            <div class="t-info">
+              <strong>Diana Müller</strong>
+              <span>CPO, TechVault GmbH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="prevBtn" aria-label="Previous">‹</button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="nextBtn" aria-label="Next">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section contact-section">
+  <div class="contact-bg-orb contact-orb-1"></div>
+  <div class="contact-bg-orb contact-orb-2"></div>
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-tag">Contact Us</div>
+      <h2 class="section-title">Let's <span class="gradient-text">Build Together</span></h2>
+      <p class="section-desc">Ready to start your project? We'd love to hear from you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-form-wrap reveal-up" style="--delay:0.1s">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Full Name</label>
+              <input type="text" id="contactName" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactService">Service Needed</label>
+            <select id="contactService" name="service">
+              <option value="">Select a service...</option>
+              <option>Web Development</option>
+              <option>Mobile App Development</option>
+              <option>UI/UX Design</option>
+              <option>Performance & SEO</option>
+              <option>Maintenance & Support</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Your Message</label>
+            <textarea id="contactMessage" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-glow btn-full" id="submitBtn">
+            <span>Send Message</span>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Message sent! We'll get back to you within 24 hours.
+          </div>
+        </form>
+      </div>
+      <div class="contact-info-wrap reveal-up" style="--delay:0.3s">
+        <div class="contact-info-card">
+          <div class="contact-map">
+            <svg class="world-map-svg" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#2563eb" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="800" height="400" fill="transparent"/>
+              <!-- Simplified world map paths -->
+              <ellipse cx="400" cy="200" rx="350" ry="175" fill="url(#mapGlow)" opacity="0.3"/>
+              <!-- North America -->
+              <path d="M80,80 L200,80 L220,120 L180,160 L120,180 L80,150 Z" fill="#1e40af" opacity="0.5" class="map-land"/>
+              <!-- South America -->
+              <path d="M150,200 L210,200 L220,280 L180,320 L140,300 L130,250 Z" fill="#1e40af" opacity="0.5" class="map-land"/>
+              <!-- Europe -->
+              <path d="M320,60 L400,60 L420,100 L380,130 L310,120 L300,90 Z" fill="#1e40af" opacity="0.6" class="map-land"/>
+              <!-- Africa -->
+              <path d="M330,140 L410,140 L420,230 L380,290 L320,280 L300,220 Z" fill="#1e40af" opacity="0.5" class="map-land"/>
+              <!-- Asia -->
+              <path d="M430,50 L620,60 L660,130 L640,180 L580,200 L440,180 L400,130 Z" fill="#1e40af" opacity="0.55" class="map-land"/>
+              <!-- Australia -->
+              <path d="M580,250 L660,250 L670,310 L620,330 L570,310 Z" fill="#1e40af" opacity="0.5" class="map-land"/>
+              <!-- Glowing connection lines -->
+              <line x1="150" y1="120" x2="360" y2="90" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,4" opacity="0.6" class="map-line"/>
+              <line x1="360" y1="90" x2="530" y2="110" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,4" opacity="0.6" class="map-line"/>
+              <line x1="360" y1="90" x2="370" y2="210" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,4" opacity="0.4" class="map-line"/>
+              <line x1="530" y1="110" x2="620" y2="280" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,4" opacity="0.4" class="map-line"/>
+              <!-- Glowing dots -->
+              <circle cx="150" cy="120" r="5" fill="#2563eb" class="map-dot pulse-dot"/>
+              <circle cx="360" cy="90" r="5" fill="#2563eb" class="map-dot pulse-dot"/>
+              <circle cx="530" cy="110" r="5" fill="#2563eb" class="map-dot pulse-dot"/>
+              <circle cx="370" cy="210" r="5" fill="#2563eb" class="map-dot pulse-dot"/>
+              <circle cx="620" cy="280" r="5" fill="#2563eb" class="map-dot pulse-dot"/>
+              <circle cx="175" cy="255" r="5" fill="#2563eb" class="map-dot pulse-dot"/>
+            </svg>
+            <div class="map-label">🌍 Worldwide Services</div>
+          </div>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <div class="detail-label">Email Us</div>
+                <a href="mailto:hello@finovaflowtech.com" class="detail-value">hello@finovaflowtech.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <div class="detail-label">Website</div>
+                <a href="https://finovaflowtech.com" class="detail-value" target="_blank">finovaflowtech.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="detail-label">Response Time</div>
+                <div class="detail-value">Within 24 hours</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <div class="detail-label">Location</div>
+                <div class="detail-value">Worldwide Remote Services</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <svg class="logo-icon" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="60" y2="70" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#60a5fa"/>
+                  <stop offset="100%" stop-color="#2563eb"/>
+                </linearGradient>
+              </defs>
+              <path d="M8 4 L52 4 L52 16 L20 16 L20 30 L46 30 L46 42 L20 42 L20 66 L8 66 Z" fill="url(#footerLogoGrad)"/>
+            </svg>
+            <span class="logo-text"><span class="logo-finova">Finova</span><span class="logo-flow">Flow</span> <span class="logo-tech">Tech</span></span>
+          </a>
+          <p class="footer-tagline">Innovative Digital Solutions for a Smarter Tomorrow. We turn ideas into powerful digital experiences.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Twitter" id="socialTwitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.713 5.936zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn" id="socialLinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="GitHub" id="socialGitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram" id="socialInstagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="3" fill="var(--bg-primary)"/><circle cx="17.5" cy="6.5" r="1" fill="var(--bg-primary)"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Mobile Apps</a></li>
+            <li><a href="#services">UI/UX Design</a></li>
+            <li><a href="#services">Performance & SEO</a></li>
+            <li><a href="#services">Maintenance</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#technologies">Tech Stack</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@finovaflowtech.com">hello@finovaflowtech.com</a></li>
+            <li><a href="https://finovaflowtech.com" target="_blank">finovaflowtech.com</a></li>
+            <li><span>🌍 Worldwide Services</span></li>
+          </ul>
+          <div class="footer-badge">
+            <span class="badge-status"></span>
+            Available for new projects
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 FinovaFlow Tech. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="app.js"></script>
+</body>
+</html>
